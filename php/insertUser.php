@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  	<header>ADD USER</header>
+  	<h2 style="color: #28B463;">CREATE NEW ACCOUNT!</h2>
 
       <?php
         $name = $_POST["name"];
@@ -34,7 +34,9 @@
 		  <input id="name" type="text" placeholder="NAME" name="name" required>
       <input id="email" type="email" placeholder="EMAIL" name="email" required>
       <input id="password" type="password" placeholder="PASSWORD" name="password" required>
-      <input id="submit" type="submit" value="GO!" name="sendUser">
+      <input id="submit" style="color: #28B463" type="submit" value="GO!" name="sendUser">
+      <p align="center" >Back to <a href="../index.php">LOGIN</a> </p>
+
 </form>
 
 

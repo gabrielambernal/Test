@@ -103,7 +103,7 @@ input {
   height: 50px;
   padding: 0px 15px 0px 15px;
 
-  background: transparent;
+  background: #212F3C;
   outline: none;
   color: #726659;
 
@@ -162,7 +162,7 @@ textarea:hover {
   cursor: pointer;
 
   border: solid 1px #b3aca7;
-  background-color: #e2dedb;
+
 
 }
 
@@ -178,15 +178,16 @@ textarea:hover {
 
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  color: #b3aca7;
+  color: white;
 
   outline:none;
   cursor: pointer;
   margin-left: 25%;
-  border: solid 1px #b3aca7;
+  border: solid 1px style="color:#212F3C";
 
 }
 
 #newsubmit:hover {
-  color: #e2dedb;
+  color: #212F3C;
+
 }
