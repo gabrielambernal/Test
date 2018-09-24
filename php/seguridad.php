@@ -7,7 +7,7 @@ if ( isset( $_SESSION['sso'] ) ) {
     // Let them access the "logged in only" pages
 } else {
     // Redirect them to the login page
-    header("Location: http://localhost/Test/index.php");
+    header("Location: http://localhost/Test/login.php");
 }
 
 	//Inicio la sesion

@@ -26,7 +26,7 @@
 	}
 	else
 	{
-		header ("Location: ../index.php");
+		header ("Location: ../login.php");
 		$_POST['sso']=" ";
 	    $_POST['password']=" ";
 	}
