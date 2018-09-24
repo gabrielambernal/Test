@@ -25,9 +25,9 @@
                         <?php
                         include "../../php/dbcon.php";
 
-                        $sql = "SELECT * FROM assignations NATURAL JOIN users NATURAL JOIN laptops;";
+                        $sql = "SELECT * FROM assignation NATURAL JOIN users NATURAL JOIN laptops;";
                         $result = $conn->query($sql);
-
+                        echo $sql;
 
                         if ($result->num_rows > 0) {
                             echo "<table id=\"example\" class=\"table table-striped table-bordered\" cellspacing=\"0\" width=\"100%\">
@@ -39,7 +39,7 @@
                             			<th>Date</th>
                                   <th>Name</th>
                                   <th>Email</th>
-                                  <th>Password</th>
+
                                   <th>Type</th>
                                   <th>Laptop Model</th>
                                   <th>Brand</th>
@@ -52,7 +52,7 @@
                             // output data of each row
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr><td>" . $row["idRequest"]. "</td><td>" . $row["serialNumber"]. "</td><td>" . $row["sso"]. "</td><td>" . $row["date"]. "</td><td>" . $row["name"]. "</td><td>" . $row["email"]. "</td>
-                                <td>" . $row["password"]. "</td><td>" . $row["type"]. "</td><td>" . $row["model"]. "</td><td>" . $row["brand"]. "</td><td>" . $row["color"]. "</td><td>" . $row["description"]. "</td></tr>";
+                                <td>" . $row["type"]. "</td><td>" . $row["model"]. "</td><td>" . $row["brand"]. "</td><td>" . $row["color"]. "</td><td>" . $row["description"]. "</td></tr>";
                             }
                             echo "	</tbody>
                             </table>";

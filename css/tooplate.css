@@ -33,8 +33,8 @@ body {
 }
 
 h2.title{
-  font-size: 7em;
-  color:red;
+  font-size: 2em;
+  color: blue;
 }
 .bg02 {
 	background-image: url(../img/dash-bg-02.jpg);
