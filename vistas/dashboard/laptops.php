@@ -11,7 +11,7 @@
                     <div class="bg-white tm-block h-100">
                         <div class="row">
                             <div class="col-md-8 col-sm-12">
-                                <h2 class="tm-block-title d-inline-block">LAPTOPS</h2>
+                                <h2 class="title">LAPTOPS</h2>
 
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">

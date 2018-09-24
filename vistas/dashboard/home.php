@@ -13,36 +13,37 @@
                     <div class="bg-white tm-block h-100">
                         <div class="row">
                             <div class="col-md-8 col-sm-12">
-                                <h2 class="title">USERS</h2>
-
+                                <h2 class="title">MY ASSIGNATIONS</h2>
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-small btn-primary">Add New User</a>
+                                <a href="add-product.html" class="btn btn-small btn-primary">Request Assignation</a>
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-danger btn-primary">Delete User</a>
+                                <a href="add-product.html" class="btn btn-danger btn-primary">Delete Assignation</a>
                             </div>
                         </div>
 
                         <?php
                         include "../../php/dbcon.php";
 
-                        $sql = "SELECT sso,name,email FROM users";
+                        $sso = $_SESSION['sso'];
+
+                        $sql = "SELECT * FROM Assignation WHERE sso = $sso";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             echo "<table id=\"example\" class=\"table table-striped table-bordered\" cellspacing=\"0\" width=\"100%\">
                             	<thead>
                             		<tr>
-                            			<th>sso</th>
-                            			<th>name</th>
-                            			<th>email</th>
+                            			<th>idRequest</th>
+                            			<th>date</th>
+                            			<th>serialNumber</th>
                             		</tr>
                             	</thead>
                             	<tbody>";
                             // output data of each row
                             while($row = $result->fetch_assoc()) {
-                                echo "<tr><td>" . $row["sso"]. "</td><td>" . $row["name"]. "</td><td>" . $row["email"]. "</td></tr>";
+                                echo "<tr><td>" . $row["idRequest"]. "</td><td>" . $row["date"]. "</td><td>" . $row["serialNumber"]. "</td></tr>";
                             }
                             echo "	</tbody>
                             </table>";

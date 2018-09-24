@@ -11,7 +11,7 @@
                     <div class="bg-white tm-block h-100">
                         <div class="row">
                             <div class="col-md-8 col-sm-12">
-                                <h2 class="tm-block-title d-inline-block">ASSIGNATIONS</h2>
+                                <h2 class="title">ASSIGNATIONS</h2>
 
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
@@ -27,7 +27,7 @@
 
                         $sql = "SELECT * FROM assignations NATURAL JOIN users NATURAL JOIN laptops;";
                         $result = $conn->query($sql);
-                        
+
 
                         if ($result->num_rows > 0) {
                             echo "<table id=\"example\" class=\"table table-striped table-bordered\" cellspacing=\"0\" width=\"100%\">

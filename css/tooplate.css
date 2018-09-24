@@ -32,6 +32,10 @@ body {
   padding-right: 50px;
 }
 
+h2.title{
+  font-size: 7em;
+  color:red;
+}
 .bg02 {
 	background-image: url(../img/dash-bg-02.jpg);
 }
