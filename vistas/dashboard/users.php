@@ -16,12 +16,12 @@
                                 <h2 class="title">USERS</h2>
 
                             </div>
-                            <div class="col-md-2 col-sm-12 text-right">
+                  <!--          <div class="col-md-2 col-sm-12 text-right">
                                 <a href="add-product.html" class="btn btn-small btn-primary">Add New User</a>
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
                                 <a href="add-product.html" class="btn btn-danger btn-primary">Delete User</a>
-                            </div>
+                            </div> -->
                         </div>
 
                         <?php
