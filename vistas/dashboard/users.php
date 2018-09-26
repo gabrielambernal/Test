@@ -18,10 +18,10 @@
                             </div>
                   <!--          <div class="col-md-2 col-sm-12 text-right">
                                 <a href="add-product.html" class="btn btn-small btn-primary">Add New User</a>
-                            </div>
-                            <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-danger btn-primary">Delete User</a>
                             </div> -->
+                            <div class="col-md-2 col-sm-12 text-right">
+                                <a href="deuser.php" class="btn btn-danger btn-primary">Delete User</a>
+                            </div>
                         </div>
 
                         <?php
@@ -52,10 +52,10 @@
 
                         $conn->close();
                          ?>
+
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <?php include "../footer.php" ?>
