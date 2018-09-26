@@ -15,7 +15,7 @@
 
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-small btn-primary">Add New Laptop</a>
+                                <a href="newlaptop.php" class="btn btn-small btn-primary">Add New Laptop</a>
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
                                 <a href="add-product.html" class="btn btn-danger btn-primary">Delete Laptop</a>

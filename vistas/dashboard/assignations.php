@@ -15,7 +15,7 @@
 
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-small btn-primary">Add New Assignation</a>
+                                <a href="assignation.php" class="btn btn-small btn-primary">Add New Assignation</a>
                             </div>
                             <div class="col-md-2 col-sm-12 text-right">
                                 <a href="add-product.html" class="btn btn-danger btn-primary">Delete Assignation</a>
@@ -27,7 +27,7 @@
 
                         $sql = "SELECT * FROM assignation NATURAL JOIN users NATURAL JOIN laptops;";
                         $result = $conn->query($sql);
-                        echo $sql;
+
 
                         if ($result->num_rows > 0) {
                             echo "<table id=\"example\" class=\"table table-striped table-bordered\" cellspacing=\"0\" width=\"100%\">

@@ -15,12 +15,6 @@
                             <div class="col-md-8 col-sm-12">
                                 <h2 class="title">MY ASSIGNATIONS</h2>
                             </div>
-                            <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-small btn-primary">Request Assignation</a>
-                            </div>
-                            <div class="col-md-2 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-danger btn-primary">Delete Assignation</a>
-                            </div>
                         </div>
 
                         <?php
