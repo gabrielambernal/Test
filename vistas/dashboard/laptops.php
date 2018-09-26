@@ -80,7 +80,7 @@
 
 
 
-      <script  src="../table/js/index.js"></script>
+      <script  src="../../js/index.js"></script>
     <script>
         $(function () {
             $('.tm-product-name').on('click', function () {

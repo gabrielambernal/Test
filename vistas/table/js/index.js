@@ -1,11 +1,7 @@
 $(document).ready(function() {
 	//Only needed for the filename of export files.
 	//Normally set in the title tag of your page.
-
-	var today = new Date().format('m-d-Y h:i:s');
-
-	document.title = 'LaptopAssignation');
-
+	document.title='Laptop Assignation';
 	// DataTable initialisation
 	$('#example').DataTable(
 		{
@@ -17,7 +13,7 @@ $(document).ready(function() {
 				'copyHtml5',
         'csvHtml5',
 				'excelHtml5',
-      //  'pdfHtml5',
+        'pdfHtml5',
 				'print'
 			]
 		}
