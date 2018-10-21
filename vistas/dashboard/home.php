@@ -10,7 +10,7 @@
 
             <div class="row tm-content-row tm-mt-big">
                 <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
-                    <div class="bg-white tm-block h-100">
+                    <div class="bg-white tm-block h-auto">
                         <div class="row">
                             <div class="col-md-8 col-sm-12">
                                 <h2 class="title">MY ASSIGNATIONS</h2>
