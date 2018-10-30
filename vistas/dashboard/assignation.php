@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <?php
+<?php
 
         include "../../php/dbcon.php";
 

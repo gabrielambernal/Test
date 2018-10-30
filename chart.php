@@ -1,71 +1,48 @@
 <html>
-  <head>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+<head>
+    <title>Weight Tracker</title>
+</head>
+<body>
+<?php
+$username = "";
+$password = "";
+$hostname = "";
+//connect to database
+$dbhandle = mysql_connect($hostname, $username, $password)
+or die("Unable to connect to MySQL");
+echo "Connected to MySQL<br>";
+//select database
+$selected = mysql_select_db("db541682804",$dbhandle)
+or die("Could not select examples");
+//execute query
+$result = mysql_query("SELECT id, date, weight FROM weight_tracker");
+//fetch data
+while ($row = mysql_fetch_array($result)) {
+    $entry .= "['".$row{'date'}."',".$row{'weight'}."],";
+}
+//close the connection
+mysql_close($dbhandle);
+?>
 
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
+<div id="chart_div" style="width: 100%; height: 500px;"></div>
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Date',	'Weight'],
+        <?php echo $entry ?>
+    ]);
+        var options = {
+            title: 'Weight Tracker',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-      }
-    </script>
-  </head>
-
-  <body>
-    <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
-  </body>
+    }
+</script>
+</body>
 </html>
-
-<form class="form-horizontal" action="php/functions.php" method="post" name="upload_excel" enctype="multipart/form-data">
-                    <fieldset>
-
-                        <!-- Form Name -->
-                        <legend>Form Name</legend>
-
-                        <!-- File Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="filebutton">Select File</label>
-                            <div class="col-md-4">
-                                <input type="file" name="file" id="file" class="input-large">
-                            </div>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
-                            <div class="col-md-4">
-                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
