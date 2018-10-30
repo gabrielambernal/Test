@@ -4,60 +4,63 @@ This is a system for laptop Assignation.
 Start here: http://localhost/Test/login.php
 
 Make Sure to have PHP higher than 5.5 in your server, so the functions work (:
-  
-Project Title
-One Paragraph of project description goes here
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+  # Laptop Assignation System
 
-Prerequisites
-What things you need to install the software and how to install them
+  This project was created with education purposes.
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
+  ## Getting Started
 
-Say what the step will be
+  These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Give the example
-And repeat
+  ### Prerequisites
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+  Install WampServer
 
-Running the tests
-Explain how to run the automated tests for this system
+  ```
+  http://www.wampserver.com/en/
+  ```
 
-Break down into end to end tests
-Explain what these tests test and why
+  ### Installing
 
-Give an example
-And coding style tests
-Explain what these tests test and why
+  You will have to run laptopassignation.sql in phpmyadmin
+  to create de DB
 
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
+  Create a subdirectory in “www” and put the files inside.
 
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+  Click on the “localhost” link in the WampSever menu or open your internet browser and go to the URL : http://localhost/Test/login.php
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+  ## Built With
 
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
+  * [Bootstrap](https://getbootstrap.com/) - Front-End framework
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+  ## [Usage](https://iharsh234.github.io/WebApp/)
 
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+  ### Development
+  Want to contribute? Great!
+
+  To fix a bug or enhance an existing module, follow these steps:
+
+  - Fork the repo
+  - Create a new branch (`git checkout -b improve-feature`)
+  - Make the appropriate changes in the files
+  - Add changes to reflect the changes made
+  - Commit your changes (`git commit -am 'Improve feature'`)
+  - Push to the branch (`git push origin improve-feature`)
+  - Create a Pull Request
+
+  ### Bug / Feature Request
+
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/gabrielambernal/Test/issues/new) by including your search query and the expected result.
+
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/gabrielambernal/Test/issues/new). Please include sample queries and their corresponding results.
+
+  ## Authors
+
+  * **Gabriela Mendoza** - *Initial work*
+
+  See also the list of [contributors](https://github.com/gabrielambernal/Test/contributors) who participated in this project.
+
+  ## License
+
+Copyright (c) 2018 by Gabriela Mendoza
