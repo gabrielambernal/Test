@@ -13,7 +13,7 @@ include "dbcon.php";
 	         {
 
 
-	           $sql = "INSERT INTO laptops (serialNumber, brand, model, color, description)
+	           $sql = "INSERT INTO laptops (serialNumber, model, color, brand, description)
                    values ('".$getData[0]."','".$getData[1]."','".$getData[2]."','".$getData[3]."','".$getData[4]."')";
                   $res = $conn->query($sql);
 				if(!isset($res))
